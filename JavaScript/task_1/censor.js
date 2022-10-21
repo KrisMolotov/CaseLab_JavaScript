@@ -20,30 +20,7 @@ function censor ()
     }
 }
 
-/*const changeScene = censor();
+const changeScene = censor();
 changeScene('PHP','JS');
 changeScene('backend', 'frontend')
-console.log(changeScene('PHPis the most popular programming PHP backend language for backend web-developmentbackend'));*/
-
-const products = [
-    {
-        id: 1,
-        title: 'Lenovo Yoga',
-        price: 3000,
-    },
-    {
-        id: 2,
-        title: 'Acer Aspire',
-        price: 1800,
-    },
-    {
-        id: 3,
-        title: 'Dell Vostro',
-        price: 3400
-    },
-];
-
-let order = [];
-
-order.push(products[2])
-console.log(order)
+console.log(changeScene('PHPis the most popular programming PHP backend language for backend web-developmentbackend'));
