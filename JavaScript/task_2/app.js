@@ -26,7 +26,8 @@ function addToBasket(productId) {
     }
     else
     {
-        order.push(products[productId - 1])
+        //order.push(products[productId - 1]) - вариант использования мутирующего метода
+        order = [...order, products[productId - 1]]
     }
     // TODO: если товар еще не в корзине, добавить его из массива products
 
@@ -37,7 +38,7 @@ function addToBasket(productId) {
 
 function removeFromBasket(productId) {
     // TODO: описать логику удаления товара из корзины
-    let index
+    /*let index
     for(let i = 0; i < order.length; i += 1)
     {
         if(productId === order[i].id)
@@ -45,7 +46,10 @@ function removeFromBasket(productId) {
             index = order.indexOf(order[i])
         }
     }
-    order.splice(index, 1)
+    order.splice(index, 1) - вариант использования мутирующего метода*/
+    order = order.filter(function (item, index, array){
+        return productId !== array[index].id;
+        })
     renderCart();
     rerenderTotalPrice();
 }
