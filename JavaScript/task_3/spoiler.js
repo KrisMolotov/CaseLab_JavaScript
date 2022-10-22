@@ -13,10 +13,11 @@ function buttonHandler(e) {
 }
 
 function escapeHandler(e){
-    if(txt.getAttribute("class") === "opened")
+    if(e.code === "Escape" && txt.getAttribute("class") === "opened")
     {
         txt.setAttribute("class", "closed")
     }
 }
 
 btn.addEventListener("click", buttonHandler)
+document.addEventListener("keydown", escapeHandler)
