@@ -38,9 +38,9 @@ function createTodo(text) {
 
   list.appendChild(li);
 }
-function deleteFromStorage()
-{
 
+function deleteFromStorage() {
+  localStorage.removeItem(JSON.parse(localStorage.getItem('tasks')))
 }
 
 function removeTodo() {
