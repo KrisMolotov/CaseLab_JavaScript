@@ -12,5 +12,16 @@ const userSkills = {
 
 const sortedArr = _.sortBy(_.uniq(arr))
 console.log(sortedArr)
-const userApprovedskills = _.omit(userSkills, )
+
+const userApprovedskills = _.omit(userSkills, _.mapValues(userSkills, function () {
+  let customObj = {}
+  for(const key in userSkills)
+  {
+    if(userSkills[key] !== null && userSkills[key] !== undefined)
+    {
+      customObj[key] = userSkills[key]
+    }
+  }
+  return customObj
+}))
 console.log(userApprovedskills)
